@@ -4,6 +4,7 @@ import { Form } from './components/Form';
 import { Conditional } from './components/Conditional';
 import { Event } from './components/Event';
 import { State } from './components/State'
+import { Timer, TimerSpawner } from './components/Timer';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,6 +16,7 @@ import { Hooks } from './components/Hooks';
 function App() {
   const Home = () => {
     return (<div>By S.A.M. van Schaik (S1099971) for IKFRAM.</div>)
+    // return (<TimerSpawner></TimerSpawner>)
   }
 
   return (
@@ -41,6 +43,9 @@ function App() {
           <li>
             <Link to="/hooks">Hooks</Link>
           </li>
+          <li>
+            <Link to="/timer">Timer</Link>
+          </li>
         </ul>
       </nav>
 
@@ -61,6 +66,9 @@ function App() {
         </Route>
         <Route path="/hooks">
           <Hooks />
+        </Route>
+        <Route path="/timer">
+          <TimerSpawner />
         </Route>
         <Route path="/">
           <Home />
